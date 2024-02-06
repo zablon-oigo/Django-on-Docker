@@ -19,7 +19,7 @@ COPY . .
 # Copy entrypoint.sh
 COPY ./entrypoint.sh .
 RUN sed -i 's/\r$//g' /app/entrypoint.sh
-RUN chmod +x  /app/entrpoint.sh
+RUN chmod +x  /app/entrypoint.prod.sh
 
 # Port
 EXPOSE 8000
