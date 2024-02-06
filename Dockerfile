@@ -16,5 +16,13 @@ RUN pip install -r requirements.txt
 # Copy project
 COPY . .
 
+# Copy entrypoint.sh
+COPY ./entrypoint.sh .
+RUN sed -i 's/\r$//g' /app/entrypoint.sh
+RUN chmod +x  /app/entrpoint.sh
+
 # Port
 EXPOSE 8000
+
+# run entrypoint.sh
+ENTRYPOINT ["/app/entrypoint.sh"]
