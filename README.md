@@ -7,6 +7,11 @@ Docker is an open source project that is considered a standard way of solving on
 # dockerfile
 is a file that define the steps to create and run a custom Image 
 dockerfiles are usually read from top-to-bottom when the image is created.
+```
+FROM <REPO>:<TAG>
+WORKDIR <DIRECTORY>
+COPY . <DIRECTORY>
+```
 
 # docker-compose.yml
 is a tool we can use to manage one or multiple containers.
