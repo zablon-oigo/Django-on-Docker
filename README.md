@@ -22,3 +22,6 @@ Docker Image consist of files and metadata, the metadat has information on port 
 # Container
 Containers are created from Images, they inherit their metadata to determine their startup configuration.
 Changes to files in a container  are stored  within container in a copy-on-write mechanism.
+
+### Ways to create a Docker Image
+1.  **docker command** fire up the container with **docker run**  and input command to create your image on one command line .
