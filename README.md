@@ -15,3 +15,10 @@ COPY . <DIRECTORY>
 
 # docker-compose.yml
 is a tool we can use to manage one or multiple containers.
+
+# Images
+Docker Image consist of files and metadata, the metadat has information on port mapping and volumes
+
+# Container
+Containers are created from Images, they inherit their metadata to determine their startup configuration.
+Changes to files in a container  are stored  within container in a copy-on-write mechanism.
