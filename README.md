@@ -25,3 +25,5 @@ Changes to files in a container  are stored  within container in a copy-on-write
 
 ### Ways to create a Docker Image
 1.  **docker command** fire up the container with **docker run**  and input command to create your image on one command line .
+
+2. **dockerfile** building from known image and specify the build with a limited set of simple commands.
