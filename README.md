@@ -32,3 +32,4 @@ Changes to files in a container  are stored  within container in a copy-on-write
 **docker build** Build docker image
 **docker run** run docker image as container
 **docker commit** commit docker container as image
+**docker tag** tag a docker image
