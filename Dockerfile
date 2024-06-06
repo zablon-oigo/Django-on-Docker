@@ -12,8 +12,13 @@ WORKDIR /app
 # Install Dependecies
 COPY ./requirements.txt  .
 RUN pip install -r requirements.txt
-
+# Copy entrypoint
+COPY ./entrypoint.sh .
+RUN  sed -i 's/\r$//g' /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
 # Copy project
 COPY . .
 
+# run entrypoint.sh
+ENTRYPOINT [ "/app/entrypoint.sh" ]
 
