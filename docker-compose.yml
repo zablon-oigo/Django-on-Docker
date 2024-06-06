@@ -9,17 +9,15 @@ services:
    volumes:
     - .:/app
    env_file:
-    - ./.env.dev
+    - ./.env
    depends_on:
     - db
-db:
- image: postgres:16
- volumes: 
-  - postgres_data:/var/lib/postgresql/data/
-environment:
-  - POSTGRES_USER=django_project
-  - POSTGRES_PASSWORD=''
-  - POSTGRES_DB=''
-
+  db:
+    image: postgres:16
+    volumes: 
+     - postgres_data:/var/lib/postgresql/data/
+    env_file:
+     - ./.env
+  
 volumes:
-postgres_data:
+  postgres_data:
