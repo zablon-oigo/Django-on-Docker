@@ -74,13 +74,14 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        "ENGINE":os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
-        "NAME":os.environ.get("SQL_DATABASE", BASE_DIR / "db.sqlite3"),
-        "USER": os.environ.get("SQL_USER","user"),
-        "PASSWORD":os.environ.get("SQL_PASSWORD", "password"),
-        "HOST":os.environ.get("SQL_HOST", "localhost"),
-        "PORT":os.environ.get("SQL_PORT", "5432")
+    'default':{
+        "ENGINE":os.environ.get("SQL_ENGINE"),
+        "NAME":os.environ.get("POSTGRES_DB"),
+        "USER":os.environ.get("POSTGRES_USER"),
+        "PASSWORD":os.environ.get("POSTGRES_PASSWORD"),
+        "HOST":os.environ.get("SQL_HOST"),
+        "PORT":os.environ.get("SQL_PORT")
+
     }
 }
 
@@ -123,7 +124,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT= BASE_DIR / "staticfiles"
 
 MEDIA_URL='media/'
-MEDIA_ROOT= BASE_DIR ,'media'
+MEDIA_ROOT= BASE_DIR /'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
